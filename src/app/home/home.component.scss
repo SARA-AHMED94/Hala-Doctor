@@ -1,0 +1,314 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+@import '../../scss/general';
+
+
+
+////////////////////////////// background header /////////////////////////////
+.bgHeader {
+  background-image: url('../../assets/images/main_page/Main_pages_Header_background.svg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+  height: 120.21px;
+  position: relative;
+
+  @media (max-width: 576px) {
+    background-image: url('../../assets/images/main_page/Main_pages_Header_background.svg');
+  }
+}
+
+////////////////////////////// Nav Bar/////////////////////////////////////
+.mainPage nav {
+  position: absolute;
+  right: 20px;
+  top: 3.5px;
+
+  .navbar-collapse {
+    z-index: 1;
+  }
+
+  a {
+    color: #FFFFFF;
+    font-family: $boldFont;
+    @include font-size(20px);
+    background-color: $mainColor;
+  }
+
+  a::after {
+    content: '|';
+    padding-left: .5rem;
+  }
+
+  a.last::after {
+    content: '';
+    padding-left: 0;
+  }
+
+  span {
+    color: #FFFFFF;
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    @include font-size(18px);
+  }
+}
+
+/////////////////////////// logo ///////////////////////////////
+
+.logo {
+  span {
+    color: $textColor;
+    font-family: $boldFont;
+    padding-left: 20px;
+    vertical-align: middle;
+
+    @include font-size(40px);
+
+    @media (max-width: 576px) {
+      @include font-size(24px);
+      padding-left: 13.76px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 22px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 45px;
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 15px;
+  }
+
+  img {
+    @media (max-width: 576px) {
+      width: 27.22px;
+      height: 27.58px;
+    }
+  }
+
+  padding-left:25px;
+
+  @media (max-width: 576px) {
+    padding-left: 0;
+  }
+}
+
+//////////////////////////////// slogan //////////
+.slogan {
+  @include font-size(34px);
+  margin-left: 20px;
+  margin-top: 27px;
+  color: $textColor;
+  @media (max-width: 576px) {
+    @include font-size(24px);
+    margin-left: 2px;
+    margin-top: 0px;
+  }
+}
+
+//////////////////////////////Top Specialist ////////////////////////
+
+.topSpecialist {
+  
+  margin: 35px 20px 40px;
+
+  @media (max-width: 576px) {
+    margin: 20px 0;
+  }
+  img{
+    margin: 0 auto;
+  }
+  p{
+    @include font-size(18px);
+    color: $textColor;
+  }
+  h3{
+    @include font-size(20px);
+    color: $textColor;
+    font-family: $boldFont;
+  }
+}
+
+//////////////////////////// find and book///////////////////////////
+.findAndBoook {
+  margin: 0 20px;
+
+  @media (max-width: 576px) {
+    margin: 0 0;
+  }
+
+  p {
+    @include font-size(22px);
+    color: $textColor;
+    font-family: $boldFont;
+  }
+
+  img {
+    width: 100%;
+
+  }
+
+  .desc {
+    @include font-size(24px);
+    color: $textColor;
+    padding-top: 10px;
+    font-family: $boldFont;
+
+    @media (max-width: 576px) {
+      @include font-size(20px);
+    }
+  }
+
+  span {
+    color: $textColor;
+
+  }
+}
+
+//////////////////////// get the app //////////////////
+.getTheAppbg {
+  background-color: $bgGetApp;
+
+  .getTheApp {
+
+    @media (min-width: 768px) {
+      margin: 0 5px;
+    }
+
+    .device {
+      background-image: url("../../assets/images/getApp/Devices.png"), url('../../assets/images/getApp/bg.png');
+      background-repeat: no-repeat, no-repeat;
+      background-position: 28% bottom, 3% -3%;
+      background-size: 60% 85%, 100% 100%;
+
+    }
+
+    .imgRes {
+      background-image: url("../../assets/images/getApp/Group_2.png"), url("../../assets/images/getApp/Group.png"), url('../../assets/images/getApp/bg.png');
+      background-repeat: no-repeat, no-repeat;
+      background-size: 45% 70%, 55% 85%, 100% 100%;
+      background-position: 95% bottom, 10% bottom, 0% bottom;
+      height: 60vh;
+
+      @media (min-width: 768px) {
+        background-position: 90% bottom, 10% bottom, 0% bottom;
+        background-size: 45% 70%, 50% 85%, 100% 100%;
+        height: 90vh;
+      }
+    }
+    .content {
+      @extend .card;
+    }
+  }
+}
+
+
+//////////////////////medical Center////////////////////////
+.medicalCenterbg {
+  background-color: $bgSection;
+  background-image: url('../../assets/images/medicalCenter/Shape_Background@2x.png');
+  // background-position: 45% 55% ;
+  // background-size:106% 105%;
+  background-position: 73% 55%;
+  background-size: 39% 85%;
+  background-repeat: no-repeat;
+  margin: 15px 0;
+
+  @media (max-width:768px) {
+    background-image: url('../../assets/images/medicalCenter/Shape_Background@2x.png');
+    background-position: center 70%;
+    background-size: contain;
+  }
+
+  .container-fluid {
+    @media (max-width: 576px) {
+      padding: 0;
+    }
+  }
+
+  .medicalCenter {
+    margin: 0 5px;
+
+    @media (max-width: 576px) {
+      margin: 0 0;
+    }
+
+    @extend .card;
+
+  }
+}
+
+//////////////////////////////five star/////////////////////////////
+
+.fiveStarBg {
+  margin-bottom: 15px;
+  background: $bgSection url('../../assets/images/fiveStar/Background.png') 0% 0% no-repeat padding-box;
+  background-position: 90%;
+
+  @media (min-width :768px) and (max-width :979px) {
+    background-size: contain;
+  }
+
+  @media (max-width: 767px) {
+    background: url('../../assets/images/fiveStar/Doctor@2x.png') 0% 0% no-repeat padding-box, transparent url('../../assets/images/fiveStar/Background.png') 0% 0% no-repeat padding-box;
+    background-position: 80% 100%, bottom;
+    background-size: 28%, contain;
+
+  }
+
+  .container-fluid {
+    @media (max-width: 576px) {
+      padding: 0 0;
+    }
+  }
+
+  .fiveStar {
+    margin: 0 5px;
+
+    @media (max-width: 576px) {
+      margin: 0 0;
+    }
+
+    .topHits {
+      text-align: center;
+    }
+
+    .bgSmallDevice {
+      background: transparent url('../../assets/images/fiveStar/Background.png') 0% 0% no-repeat padding-box;
+      background-size: contain;
+    }
+
+    .docReview {
+      @include font-size(16px);
+      color: $textColor;
+      margin-top: 5px;
+    }
+
+    @extend .card;
+
+    .doctorPic {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      margin: 0;
+      background-color: $docPic;
+
+      @media (min-width :320px) and (max-width :768px) {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        display: inline-block;
+      }
+    }
+
+    .rate {
+      @media (min-width :320px) and (max-width :768px) {
+        display: inline;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import '../../scss/variables';
+@import '../../scss/general';
+input {
+   height: 55px;
+    width: 100%;
+  
+    border:none;
+    border-right: .5px solid rgb(219, 211, 211); 
+    @media (min-width: 576px) { 
+      border-bottom: 1px solid rgb(219, 211, 211);
+      } 
+      @media (max-width: 576px) { 
+        border-bottom: 1px solid rgb(219, 211, 211);
+        } 
+}
+
+
+.shadow{
+    box-shadow: 0 0  40px  rgb(224, 224, 224) !important; //rgb(224, 224, 224)
+    margin:15px 20px;
+    @media (max-width: 576px) { 
+        margin: 2px;
+        } 
+}
+.docName{  
+    background: url('../../assets/images/search/search.svg') no-repeat  5% ;
+}
+.zip{
+  
+    background: url('../../assets/images/search/cityLocation.svg') no-repeat  5% ;  
+}
+.insurance{
+    background: url('../../assets/images/search/Insurance.svg') no-repeat  5% ;  
+    border-radius: 1px;
+}
+.insurance,.zip,.docName{
+    background-size: 16px;
+    background-color: white;
+    padding-left: 46px; 
+}
+.find{
+    display: none;
+         @media (max-width: 576px) { 
+            display: block;
+       }
+       @media (max-width:  768px) { 
+        display: block;   
+     }
+     //  border-radius: 10px;
+    .findBtn{
+           color:white;
+           font-family: $boldFont; 
+           background-color: $mainColor;      
+           border: none;
+           height: 47px;
+           width:98%;
+       } 
+}
+span.input-group-addon{
+  padding :8px;
+ // display: none;
+ display: block;
+  background-color: $mainColor;
+  color: white;
+  .icon-search:before {   
+    color: white;
+   }
+  @media (max-width: 576px) { 
+   display: none;
+   
+}
+@media (max-width:  768px) { 
+    display: none;   
+ }
+}

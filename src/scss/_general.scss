@@ -1,0 +1,135 @@
+@import 'mixins';
+body{ 
+   background-color: $backgrondColor !important;
+   font-family: $regularFont !important;
+}
+
+p{
+   font-family: $regularFont;
+   color: $textColor
+}
+input:focus{
+   outline: 0;
+}
+button:focus{
+   outline: 0;
+}
+
+h3{
+   color: $textColor;
+}
+.card{
+   padding: 56px 0;
+   h2{
+     font-family: $boldFont;
+     @include font-size(45px);
+     color: $textColor;
+     @media (max-width: 576px) { 
+      @include font-size(24px);
+    }
+   }
+   h4{
+      margin-top:20px;
+     font-family: $boldFont;
+     @include font-size(25px);
+     color: $textColor;
+     @media (max-width: 576px) { 
+      @include font-size(18px);
+    }
+   }
+   h5{
+      font-family: $boldFont;
+      @include font-size(20px);
+      color: $textColor;
+      margin-bottom: 0;
+      @media (max-width: 576px) { 
+         @include font-size(15px);
+       }
+   }
+   span{
+      @include font-size(16px);
+      color: $textColor;
+      @media (max-width: 576px) { 
+         @include font-size(12px);
+       }
+   }
+   p{    
+     @include font-size(22px);
+     @media (max-width: 576px) { 
+      @include font-size(16px);
+      margin-bottom: 0px;
+    }
+   }
+   button{
+      margin-top:20px;
+      color: white;
+      background-color: $mainColor;
+      @include font-size(20px);
+      font-family: $boldFont;
+      border: none;
+      padding: 6px 20px;
+
+   }
+   input{
+      padding: 7px;
+      padding-top: 10px;
+      border: none;
+      width: 65%;
+      @media (max-width: 576px) { 
+         width: 45%;
+       }
+
+   }
+   img{
+      margin-right: 10px;
+     
+   }
+ }
+
+ .box{
+    background-color: $bgBox;
+    height: 75px;
+    margin:10px 0;
+    @media (max-width: 767px) { 
+      height: 41px;
+    width: 28%;
+    margin: 8.76px;
+   
+    }
+
+    @media (max-width: 320px) { 
+      width: 27%;
+      margin: 8px;
+   
+    }
+  
+ }
+
+ .nav{
+    &.nav-tabs{
+       border-bottom: none;
+       font-family: $boldFont;
+    }
+   &.nav-tabs .nav-item.show .nav-link,&.nav-tabs .nav-link.active{
+      background-color: $mainColor;
+      color: white;
+   }
+   &.nav-tabs .nav-link {
+      border: 1px solid transparent;
+      color: $textColor;
+      background-color: $navItemBg; 
+  }
+  .nav-item{
+     margin-right: 20px;
+  }
+  span{
+     display: inline-block;
+     color: white;
+     background-color: $numberBg;
+     text-align: center;
+     width: 25px;
+     height: 25px;
+     border-radius: 50%;
+     margin-left: 15px;
+  }
+ }

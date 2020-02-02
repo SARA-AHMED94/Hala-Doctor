@@ -1,0 +1,104 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+@import '../../scss/general';
+
+section {
+    background-color: $patientHeaderBg;
+    background-image: url('../../assets/images/main_page/Main_pages_Header_background.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 60%;
+    position: relative;
+    @media (max-width: 1300px) {
+        background-size: 90%;
+    }
+    nav {
+        position: absolute;
+        right: 20px;
+        top: 3.5px;
+        .navbar-collapse {
+            z-index: 1;
+        }
+        a {
+            color: #FFFFFF;
+            font-family: $boldFont;
+            @include font-size(20px);
+            background-color: transparent;
+        }
+        a::after {
+            content: '|';
+            padding-left: .5rem;
+        }
+
+        a.last::after {
+            content: '';
+            padding-left: 0;
+        }
+        span {
+            color: #FFFFFF;
+            position: absolute;
+            top: 12px;
+            right: 8px;
+            @include font-size(18px);
+        }
+    }
+    .logo {
+        span {
+          color:white;
+          font-family: $boldFont;
+          padding-left: 20px;
+          vertical-align: middle;    
+          @include font-size(40px);  
+          @media (max-width: 576px) {
+            @include font-size(24px);
+            padding-left: 13.76px;
+          }
+        }    
+        @media (min-width: 768px) {
+          padding-top: 22px;
+        }     
+        @media (max-width: 768px) {
+          padding-top: 45px;
+        }   
+        @media (max-width: 576px) {
+          padding-top: 15px;
+        }   
+        img {
+          @media (max-width: 576px) {
+            width: 27.22px;
+            height: 27.58px;
+          }
+        }     
+        padding-left:20px;    
+        @media (max-width: 576px) {
+          padding-left: 0;
+        }
+      }
+        
+}
+
+
+.breadcrumb{
+  height: 45px;
+  background-color: white;
+  color: $textColor;
+  padding-left: 34px;
+  box-shadow: 0 0 40px #D6D6D6 ;
+  @include font-size(14px);
+  .breadcrumb-item{
+    :not(.active){
+  font-family: $boldFont;
+   border-bottom: 1px solid $textColor;
+    }
+  
+    a{
+      color: $textColor;
+    }
+   
+  }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+ 
+  color: $textColor;
+  content: ">";
+}

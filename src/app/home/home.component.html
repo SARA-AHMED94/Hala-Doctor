@@ -1,0 +1,297 @@
+<div class="mainPage">
+  <div class="bgHeader">
+    <div class="container-fluid">
+      <div class="row ">
+        <nav class="navbar navbar-expand-lg  ">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span> <i class="icon-menu"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Patient </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Medical Centers </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Doctors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Phramacies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link last" href="#">Login/Sign Up </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- ------------------- logo --------------------------- -->
+    <div class="container-fluid mt-4 ">
+      <div class="row logo ">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <img class="img-fluid" src="../../assets/images/main_page/logo.svg" alt="logo">
+          <span>HalaDoctor</span>
+        </div>
+      </div>
+      <!-- ------------------- slogan --------------------------- -->
+      <div class="row">
+        <div class="col-lg-8 col-md-10 col-sm-12 slogan">
+          <p>Find doctors in your network and thousands of Pharamcies</p>
+        </div>
+      </div>
+      <!-- -----------------search--------------------------------- -->
+      <app-search></app-search>
+      <!-- ------------------Top specialties----------------------- -->
+      <div class="row topSpecialist">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <h3>Top specialties on HalaDoctor:</h3>
+
+          <div class=" text-center"> 
+              <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+              (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+              (beforeChange)="beforeChange($event)">
+              <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                  <div> 
+                      <img src="{{ slide.img }}" alt=""  >
+                </div>     
+                <div >
+                    <p >{{ slide.descriptin }}</p>
+                </div>
+                
+              </div>
+            </ngx-slick-carousel>
+          </div> 
+                
+
+        </div>
+      </div>
+
+
+      <!-- --------------------------- Find and book------------------------------- -->
+      <section class="findAndBoook">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 col-sm-12 ">
+            <p>Find and book top healthcare professionals with HalaDoctor </p>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-lg-4 col-md-4 col-sm-12 ">
+            <img src="../../assets/images/topHealthCare/bookNow (1).svg" alt="">
+            <h3 class="desc">Book now.see a doctor within 24 hours</h3>
+            <span>Find a doctor and book an appointment that fits your schedule, even if you need to see one
+              today.</span>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <img src="../../assets/images/topHealthCare/bookNow (2).svg" alt="">
+            <h3 class="desc">Medical center entry point</h3>
+            <span> Enter your insurance and you can find and book online with doctors in your network.</span>
+            <p></p>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 ">
+            <img src="../../assets/images/topHealthCare/bookNow (3).svg" alt="">
+            <h3 class="desc">Read thousands of reviews</h3>
+            <span>Our doctor reviews come from patients and are verified, to help find the doctor who is best for
+              you.</span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- ===========================Get the App========================== -->
+    <section class="getTheAppbg">
+      <div class="container-fluid mt-3">
+        <div class="row  getTheApp">
+          <div class="col-lg-7 col-md-12 col-sm-12 device">
+          </div>
+          <div class="col-lg-5 col-md-12 col-sm-12">
+            <div class="row content">
+              <div class="col-lg-12 col-md-12 col-sm-12 ">
+                <img src="../../assets/images/main_page/logo.svg" alt="" class="d-none d-lg-block">
+                <h2 class="mt-3">Get the HalaDoctor app.</h2>
+                <p>Find nearby doctors in your network <br>Browse doctor reviews by real patient <br>Book doctor
+                  appointments with a tap</p>
+                <p class="d-none d-lg-block">Send me a link to the app</p>
+                <div class="row d-block d-lg-none ">
+                  <div class="col-md-12 col-sm-12 imgRes">
+                  </div>
+                </div>
+                <input type="text" placeholder="+2 0xxxxxxxx">
+                <button>SendLink</button>
+                <div class="row mt-3 ">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <img src="../../assets/images/getApp/download-on-the-app-store-apple.png" class="img-fluid " alt="">
+                    <img src="../../assets/images/getApp/google-play-badge.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==========================Medical centers======================= -->
+    <section class="medicalCenterbg">
+      <div class="container-fluid">
+        <div class="row medicalCenter">
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <h2>Medical centers</h2>
+            <h4>See why we’re the perfect partner for health systems.</h4>
+            <p>Attract and engage new patients <br>Build and strengthen your online reputation<br> Deliver a premium
+              experience patients love</p>
+            <button class="d-none  d-lg-block d-md-block">Check all medical centers</button>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 pt-2  d-none  d-lg-block d-md-block ">
+            <div class="row ">
+              <div class="col-lg-4 col-md-4 col-sm-4  col-xs-4">
+                <div class="box"> </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4  col-xs-4">
+                <div class="box"> </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4  col-xs-4">
+                <div class="box"></div>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-lg-4 col-md-4 col-sm-4  col-xs-4">
+                <div class="box"> </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4  col-xs-4">
+                <div class="box"> </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4  col-xs-4">
+                <div class="box"></div>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-lg-4 col-md-4 col-sm-4  col-xs-4">
+                <div class="box"> </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4  col-xs-4">
+                <div class="box"> </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4  col-xs-4">
+                <div class="box"></div>
+              </div>
+            </div>
+          </div>
+          <!-- square responsive -->
+          <div class=" col-sm-12 col-xs-12 pt-2  d-md-none ">
+            <div class="row ">
+              <div class="col-md-12 col-sm-12  col-xs-12">
+                <div class="row justify-content-center">
+                  <div class="box"></div>
+                  <div class="box"></div>
+                  <div class="box"></div>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12  col-xs-12">
+                <div class="row justify-content-center">
+                  <div class="box"></div>
+                  <div class="box"></div>
+                  <div class="box"></div>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12  col-xs-12">
+                <div class="row justify-content-center">
+                  <div class="box"></div>
+                  <div class="box"></div>
+                  <div class="box"></div>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12  col-xs-12">
+                <button style="width: 100%">Check all medical centers</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================Five star==================================== -->
+    <section class="fiveStarBg">
+      <div class="container-fluid ">
+        <div class="row fiveStar">
+          <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 align-self-center">
+            <h2>Are you a five-star doctor?</h2>
+            <h4 class=" d-none  d-lg-block d-md-none">List your practice to reach millions of patients.</h4>
+            <p>Attract and engage new patients <br>Build and strengthen your online reputation <br>Deliver a premium
+              experience patients love</p>
+            <button class="d-none  d-lg-block d-md-none">List your practice on Haladoc</button>
+            <h4>Top 3 Doctors hits</h4>
+            <div class="row ">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3  topHits">
+                <div class="row justify-content-md-center">
+                  <div class="doctorPic">
+                  </div>
+                  <div>
+                    <h5>Dr. Asra Hussain, MD</h5>
+                    <span>Family Physician</span>
+                    <div>
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3  topHits">
+                <div class="row justify-content-md-center">
+                  <div class="doctorPic">
+                  </div>
+                  <div>
+                    <h5>Dr. Asra Hussain, MD</h5>
+                    <span>Family Physician</span>
+                    <div>
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3  topHits">
+                <div class="row justify-content-md-center">
+                  <div class="doctorPic">
+                  </div>
+                  <div>
+                    <h5>Dr. Asra Hussain, MD</h5>
+                    <span>Family Physician</span>
+                    <div>
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                      <img src="../../assets/images/fiveStar/Star Flat-1.png" alt="" class="m-0">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 d-none  d-lg-block d-md-block">
+            <img src="../../assets/images/fiveStar/Doctor.png" alt="">
+          </div>
+          <div class="col-lg-4 col-md-4  pt-5 mt-5   d-none  d-lg-block d-md-none">
+            <img src="../../assets/images/fiveStar/Star.png" alt="">
+            <img src="../../assets/images/fiveStar/Star.png" alt="">
+            <img src="../../assets/images/fiveStar/Star.png" alt="">
+            <img src="../../assets/images/fiveStar/Star.png" alt="">
+            <img src="../../assets/images/fiveStar/Star.png" alt="">
+            <p class="docReview">See all review and comments about the doctor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <app-footer></app-footer>
+
+  </div>
+</div>

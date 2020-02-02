@@ -1,0 +1,72 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+@import '../../scss/general';
+section{
+     padding: 34px;
+     background-color: f4f4f4;
+     h3{
+        font-family: $boldFont;
+        @include font-size(20px);
+       
+    }
+  .line{
+      border-bottom: 1px dashed #CCCCCC;
+   
+  }
+
+  .doctorImg{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: gray;
+      // display: inline-flex;
+  }
+  .Info{
+    display: inline-block;
+      h3{
+        font-family: $boldFont;
+        @include font-size(20px);
+      }
+      p{
+        @include font-size(15px);
+        color: $textColor;
+        margin-bottom: 8px;
+      }
+      a{
+        @include font-size(14px);
+        font-family: $boldFont;
+        color:$textColor;
+      }
+    
+  }
+
+
+  .page-item.disabled{
+  
+     .page-link{  
+       color: white;
+       background-color: $textColor;
+       border-radius: 0;
+       margin-right: 5px;
+    }
+
+  }
+  .page-link{
+    font-family: $boldFont;
+    color: $textColor;
+    border:none;
+  }
+
+
+  .arrow,.rate {
+    text-align: end;
+    span{
+      @include font-size(12px);
+
+    }
+  }
+
+  div.img{
+    display: inline-flex;
+  }
+}
